@@ -1,0 +1,181 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* CONTAINER */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+}
+
+/* HEADER */
+header {
+  background: #2c3e50;
+  color: #fff;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* NAVIGATION */
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #1abc9c;
+}
+
+/* HERO SECTION */
+.hero {
+  height: 90vh;
+  background: url('images/organization.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-text {
+  background: rgba(0,0,0,0.6);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.hero h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #1abc9c;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #16a085;
+}
+
+/* SECTIONS */
+.section {
+  padding: 60px 10%;
+  text-align: center;
+}
+
+.section h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.light {
+  background: #ecf0f1;
+}
+
+/* SERVICES */
+.services {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  margin: 10px;
+  flex: 1;
+  min-width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* GALLERY */
+.gallery {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery img {
+  width: 30%;
+  min-width: 250px;
+  border-radius: 10px;
+}
+
+/* CONTACT */
+#contact p {
+  margin: 10px 0;
+}
+
+/* FOOTER */
+footer {
+  background: #2c3e50;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .hero h2 {
+    font-size: 28px;
+  }
+
+  .gallery img {
+    width: 100%;
+  }
+}
