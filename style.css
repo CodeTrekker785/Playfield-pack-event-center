@@ -1,181 +1,125 @@
-/* RESET */
+:root {
+  --primary-color: #0056b3;
+  --secondary-color: #6c757d;
+  --dark-bg: #1a1a1a;
+  --light-bg: #f8f9fa;
+  --text-main: #333;
+  --text-muted: #666;
+  --white: #ffffff;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* BODY */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
   line-height: 1.6;
-  background-color: #f9f9f9;
-  color: #333;
+  color: var(--text-main);
+  scroll-behavior: smooth;
 }
 
-/* CONTAINER */
 .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* NAVBAR */
+.navbar {
+  background: var(--white);
+  padding: 20px 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 10%;
-}
-
-/* HEADER */
-header {
-  background: #2c3e50;
-  color: #fff;
 }
 
 .logo {
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
-/* NAVIGATION */
-nav ul {
-  list-style: none;
+.logo span { color: var(--primary-color); }
+
+.nav-links {
   display: flex;
+  list-style: none;
 }
 
-nav ul li {
-  margin-left: 20px;
-}
-
-nav ul li a {
+.nav-links li a {
   text-decoration: none;
-  color: #fff;
+  color: var(--text-main);
+  margin-left: 30px;
+  font-weight: 500;
   transition: 0.3s;
 }
 
-nav ul li a:hover {
-  color: #1abc9c;
-}
+.nav-links li a:hover { color: var(--primary-color); }
 
-/* HERO SECTION */
+/* HERO */
 .hero {
-  height: 90vh;
-  background: url('images/organization.jpg') no-repeat center center/cover;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/hero-bg.jpg') no-repeat center center/cover;
+  height: 80vh;
   display: flex;
-  justify-content: center;
   align-items: center;
+  color: var(--white);
   text-align: center;
-  color: #fff;
 }
 
-.hero-text {
-  background: rgba(0,0,0,0.6);
-  padding: 30px;
-  border-radius: 10px;
-}
-
-.hero h2 {
-  font-size: 40px;
-  margin-bottom: 10px;
-}
-
-.hero p {
+.hero h1 {
+  font-size: 3.5rem;
   margin-bottom: 20px;
 }
+
+.highlight { color: var(--primary-color); }
 
 .btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background: #1abc9c;
-  color: #fff;
+  padding: 12px 30px;
   text-decoration: none;
   border-radius: 5px;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background: #16a085;
-}
-
-/* SECTIONS */
-.section {
-  padding: 60px 10%;
-  text-align: center;
-}
-
-.section h2 {
-  margin-bottom: 20px;
-  font-size: 28px;
-}
-
-.light {
-  background: #ecf0f1;
-}
-
-/* SERVICES */
-.services {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.card {
-  background: #fff;
-  padding: 20px;
+  display: inline-block;
+  font-weight: 600;
   margin: 10px;
-  flex: 1;
-  min-width: 250px;
+}
+
+.btn-primary { background: var(--primary-color); color: var(--white); }
+.btn-secondary { border: 2px solid var(--white); color: var(--white); }
+
+/* SERVICES GRID */
+.section { padding: 80px 0; }
+.section-header { text-align: center; margin-bottom: 50px; }
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  padding: 40px;
+  background: var(--light-bg);
   border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: 0.3s;
+  transition: transform 0.3s;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-}
+.service-card:hover { transform: translateY(-10px); }
 
-/* GALLERY */
-.gallery {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.gallery img {
-  width: 30%;
-  min-width: 250px;
-  border-radius: 10px;
-}
-
-/* CONTACT */
-#contact p {
-  margin: 10px 0;
-}
+.service-card h3 { margin: 15px 0; }
 
 /* FOOTER */
 footer {
-  background: #2c3e50;
-  color: #fff;
+  background: var(--dark-bg);
+  color: var(--white);
   text-align: center;
-  padding: 15px 0;
-}
-
-/* RESPONSIVE */
-@media(max-width: 768px) {
-  .container {
-    flex-direction: column;
-  }
-
-  nav ul {
-    flex-direction: column;
-    margin-top: 10px;
-  }
-
-  nav ul li {
-    margin: 10px 0;
-  }
-
-  .hero h2 {
-    font-size: 28px;
-  }
-
-  .gallery img {
-    width: 100%;
-  }
+  padding: 40px 0;
 }
