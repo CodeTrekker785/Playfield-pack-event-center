@@ -57,7 +57,7 @@
           <div class="section-header">
             <h2>Where Memories Are Made</h2>
           </div>
-          <p>Playfield Park is Port Harcourt's premier destination for family fun, corporate events, and unforgettable celebrations.</p>
+          <p>Playfield Park is Port Harcourt's premier destination for family fun, corporate events, and unforgettable celebrations. Nestled in nature, we offer a perfect blend of excitement and tranquility.</p>
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 20px 0;">
             <div style="font-size: 0.9rem; color: var(--primary); font-weight: 600;"><i class="fas fa-check-circle" style="color: var(--accent);"></i> Safe & Secure</div>
             <div style="font-size: 0.9rem; color: var(--primary); font-weight: 600;"><i class="fas fa-check-circle" style="color: var(--accent);"></i> Family Friendly</div>
@@ -78,32 +78,32 @@
         <div class="card">
           <div class="card-icon"><i class="fas fa-ticket-alt"></i></div>
           <h3>Amusement Park</h3>
-          <p>Thrilling rides and attractions for all ages.</p>
+          <p>Thrilling rides and attractions for all ages. Fun guaranteed!</p>
         </div>
         <div class="card">
           <div class="card-icon"><i class="fas fa-water"></i></div>
           <h3>Aquatic Fun & Pool</h3>
-          <p>Cool off in our pristine swimming pools.</p>
+          <p>Cool off in our pristine swimming pools and enjoy water activities.</p>
         </div>
         <div class="card">
           <div class="card-icon"><i class="fas fa-leaf"></i></div>
           <h3>Nature & Events Garden</h3>
-          <p>Beautiful landscaped gardens for weddings.</p>
+          <p>Beautiful landscaped gardens perfect for weddings and parties.</p>
         </div>
         <div class="card">
           <div class="card-icon"><i class="fas fa-hotel"></i></div>
           <h3>Hotel & Accommodation</h3>
-          <p>Comfortable rooms and suites.</p>
+          <p>Comfortable rooms and suites for your overnight stays.</p>
         </div>
         <div class="card">
           <div class="card-icon"><i class="fas fa-utensils"></i></div>
           <h3>Restaurant & Bar</h3>
-          <p>Delicious local and international cuisine.</p>
+          <p>Delicious local and international cuisine served daily.</p>
         </div>
         <div class="card">
           <div class="card-icon"><i class="fas fa-users"></i></div>
           <h3>Conference Hall</h3>
-          <p>Modern facilities for corporate meetings.</p>
+          <p>Modern facilities for your corporate meetings and seminars.</p>
         </div>
       </div>
     </div>
@@ -123,7 +123,6 @@
         <div class="gallery-item"><img src="images/events-garden.jpeg" alt="Garden"><div class="gallery-overlay"><h4>Garden</h4></div></div>
         <div class="gallery-item"><img src="images/pool-area.jpeg" alt="Pool"><div class="gallery-overlay"><h4>Pool</h4></div></div>
         <div class="gallery-item"><img src="images/park-overview.jpeg" alt="Overview"><div class="gallery-overlay"><h4>Overview</h4></div></div>
-        <div class="gallery-item"><img src="images/banner.jpeg" alt="Banner"><div class="gallery-overlay"><h4>The Park</h4></div></div>
       </div>
     </div>
   </section>
@@ -154,14 +153,14 @@
       </div>
       
       <div class="contact-form-wrapper">
-        <form class="contact-form">
+        <form action="https://formspree.io/f/xaqdyoad" method="POST" class="contact-form">
           <div class="form-row">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
           </div>
           <div class="form-row">
-            <input type="tel" placeholder="Phone Number">
-            <select required>
+            <input type="tel" name="phone" placeholder="Phone Number">
+            <select name="interest" required>
               <option value="" disabled selected>Select Interest</option>
               <option value="amusement">Amusement Park</option>
               <option value="pool">Aquatic Fun & Pool</option>
@@ -171,8 +170,10 @@
               <option value="conference">Conference Hall</option>
             </select>
           </div>
-          <textarea rows="5" placeholder="Your Message"></textarea>
-          <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; background: var(--accent); color: var(--primary); padding: 18px; border: none; font-weight: 800;">Send Enquiry <i class="fas fa-paper-plane"></i></button>
+          <textarea name="message" rows="5" placeholder="Your Message"></textarea>
+          <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; background: var(--accent); color: var(--primary); padding: 18px; border: none; font-weight: 800; cursor: pointer;">
+            Send Enquiry <i class="fas fa-paper-plane"></i>
+          </button>
         </form>
       </div>
     </div>
@@ -199,7 +200,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 Playfield Park. Port Harcourt.</p>
+        <p>&copy; 2026 Playfield Park. Port Harcourt, Nigeria.</p>
       </div>
     </div>
   </footer>
