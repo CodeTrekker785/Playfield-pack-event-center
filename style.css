@@ -1437,3 +1437,377 @@ footer {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary-dark);
 }
+/* MODERN SELECT/DROPDOWN STYLING */
+
+.form-group select,
+.custom-select {
+  width: 100%;
+  padding: 16px 20px;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  color: var(--text);
+  background: var(--white);
+  border: 2px solid var(--gray-200);
+  border-radius: 12px;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%231a936f' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 20px;
+  padding-right: 50px;
+  transition: var(--transition);
+}
+
+.form-group select:hover,
+.custom-select:hover {
+  border-color: var(--primary);
+  box-shadow: 0 4px 12px rgba(26, 147, 111, 0.15);
+}
+
+.form-group select:focus,
+.custom-select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(26, 147, 111, 0.1);
+}
+
+/* Custom Radio Select Cards */
+.radio-select-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.radio-select-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 18px 20px;
+  background: var(--white);
+  border: 2px solid var(--gray-200);
+  border-radius: 14px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.radio-select-card:hover {
+  border-color: var(--primary);
+  transform: translateX(5px);
+  box-shadow: var(--shadow);
+}
+
+.radio-select-card input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radio-select-card .radio-circle {
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--gray-200);
+  border-radius: 50%;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+
+.radio-select-card .radio-circle::after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: var(--primary);
+  border-radius: 50%;
+  transform: scale(0);
+  transition: var(--transition);
+}
+
+.radio-select-card input[type="radio"]:checked ~ .radio-circle {
+  border-color: var(--primary);
+}
+
+.radio-select-card input[type="radio"]:checked ~ .radio-circle::after {
+  transform: scale(1);
+}
+
+.radio-select-card .radio-content {
+  flex: 1;
+}
+
+.radio-select-card .radio-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 3px;
+}
+
+.radio-select-card .radio-subtitle {
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+.radio-select-card input[type="radio"]:checked ~ .radio-content .radio-title {
+  color: var(--primary);
+}
+
+.radio-select-card .radio-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  margin-right: 15px;
+  transition: var(--transition);
+}
+
+/* Icon colors for each option */
+.radio-select-card.amusement .radio-icon { 
+  background: linear-gradient(135deg, #ff6b3520, #f7931e20); 
+  color: #ff6b35; 
+}
+.radio-select-card.aquatic .radio-icon { 
+  background: linear-gradient(135deg, #00bbf920, #00f5d420); 
+  color: #00bbf9; 
+}
+.radio-select-card.garden .radio-icon { 
+  background: linear-gradient(135deg, #1a936f20, #88d31720); 
+  color: #1a936f; 
+}
+.radio-select-card.hotel .radio-icon { 
+  background: linear-gradient(135deg, #9b5de520, #f15bb520); 
+  color: #9b5de5; 
+}
+.radio-select-card.restaurant .radio-icon { 
+  background: linear-gradient(135deg, #f15bb520, #fee44020); 
+  color: #f15bb5; 
+}
+.radio-select-card.conference .radio-icon { 
+  background: linear-gradient(135deg, #00bbf920, #9b5de520); 
+  color: #00bbf9; 
+}
+
+.radio-select-card input[type="radio"]:checked ~ .radio-icon {
+  transform: scale(1.1);
+}
+
+/* Selected state */
+.radio-select-card.selected {
+  border-color: var(--primary);
+  background: linear-gradient(135deg, rgba(26,147,111,0.05), rgba(0,187,249,0.05));
+}
+
+/* Mobile Modal Style */
+.select-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 9999;
+  display: flex;
+  align-items: flex-end;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+}
+
+.select-modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.select-modal-content {
+  background: var(--white);
+  width: 100%;
+  max-height: 80vh;
+  border-radius: 24px 24px 0 0;
+  padding: 25px;
+  transform: translateY(100%);
+  transition: var(--transition);
+  overflow-y: auto;
+}
+
+.select-modal.active .select-modal-content {
+  transform: translateY(0);
+}
+
+.select-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.select-modal-header h3 {
+  font-size: 1.3rem;
+  color: var(--dark);
+}
+
+.select-modal-close {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--gray-100);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: var(--text-light);
+}
+
+.select-option {
+  display: flex;
+  align-items: center;
+  padding: 18px;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-bottom: 10px;
+}
+
+.select-option:hover {
+  background: var(--gray-100);
+}
+
+.select-option.selected {
+  background: linear-gradient(135deg, rgba(26,147,111,0.1), rgba(0,187,249,0.1));
+  border: 2px solid var(--primary);
+}
+
+.select-option-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-right: 15px;
+}
+
+.select-option-text {
+  flex: 1;
+}
+
+.select-option-text h4 {
+  font-size: 1.1rem;
+  color: var(--dark);
+  margin-bottom: 3px;
+}
+
+.select-option-text p {
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+.select-option-check {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid var(--gray-200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  transition: var(--transition);
+}
+
+.select-option.selected .select-option-check {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+/* Floating label select */
+.floating-select-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.floating-select-group select {
+  width: 100%;
+  padding: 20px 16px 8px;
+  font-size: 1rem;
+  border: 2px solid var(--gray-200);
+  border-radius: 12px;
+  background: var(--white);
+  appearance: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.floating-select-group label {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  color: var(--text-light);
+  pointer-events: none;
+  transition: var(--transition);
+  background: var(--white);
+  padding: 0 5px;
+}
+
+.floating-select-group select:focus,
+.floating-select-group select:not([value=""]) {
+  border-color: var(--primary);
+  padding-top: 24px;
+  padding-bottom: 12px;
+}
+
+.floating-select-group select:focus + label,
+.floating-select-group select:not([value=""]) + label {
+  top: 0;
+  font-size: 0.8rem;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* Chip/Tag style selection */
+.chip-select-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.chip-select {
+  padding: 12px 20px;
+  background: var(--white);
+  border: 2px solid var(--gray-200);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.chip-select:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.chip-select.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--white);
+}
+
+.chip-select i {
+  font-size: 1.1rem;
+}
