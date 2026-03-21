@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Playfield Park - Get In Touch</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header id="main-header">
+    <div class="container">
+      <nav>
+        <div class="logo-wrapper">
+          <i class="fas fa-leaf"></i>
+          <h1 class="logo">Playfield Park</h1>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="attractions.html">Attractions</a></li>
+          <li><a href="videos.html">Videos</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <div class="page-header-bg" style="background: linear-gradient(135deg, #1a936f 0%, #00bbf9 100%);"></div>
+    <div class="page-header-content">
+      <h1>Contact Us</h1>
+      <p>Plan your perfect getaway today</p>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="section contact-page">
+    <div class="container-section">
+      <div class="contact-grid">
+        <!-- Contact Info -->
+        <div class="contact-info-panel">
+          <h2>Get In Touch</h2>
+          <p>Ready for an unforgettable experience? Reach out to us and we'll help you plan the perfect visit to Playfield Park.</p>
+          
+          <div class="contact-methods">
+            <div class="contact-method">
+              <div class="method-icon"><i class="fas fa-phone-alt"></i></div>
+              <div>
+                <h4>Phone</h4>
+                <p>0905 763 7370</p>
+                <p>0704 007 7721</p>
+              </div>
+            </div>
+            
+            <div class="contact-method">
+              <div class="method-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <h4>Location</h4>
+                <p>Playfield Park</p>
+                <p>Port Harcourt, Nigeria</p>
+              </div>
+            </div>
+            
+            <div class="contact-method">
+              <div class="method-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <h4>Email</h4>
+                <p>info@playfieldpark.com</p>
+              </div>
+            </div>
+            
+            <div class="contact-method">
+              <div class="method-icon"><i class="fas fa-clock"></i></div>
+              <div>
+                <h4>Opening Hours</h4>
+                <p>Mon - Sun: 8:00 AM - 10:00 PM</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="social-connect">
+            <h4>Follow Us</h4>
+            <div class="social-links-large">
+              <a href="https://www.instagram.com/play.fieldpark" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://wa.me/2347040077721"><i class="fab fa-whatsapp"></i></a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-panel">
+          <h2>Send Enquiry</h2>
+          <form action="https://formspree.io/f/xlgpvrnz" method="POST" class="contact-form-full">
+            <div class="form-group">
+              <label>Your Name</label>
+              <input type="text" name="name" placeholder="John Doe" required>
+            </div>
+            
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" name="email" placeholder="john@example.com" required>
+            </div>
+            
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" name="phone" placeholder="+234 000 000 0000">
+            </div>
+            
+            <div class="form-group">
+              <label>Interested In</label>
+              <select name="service_interest" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="amusement">Amusement Park</option>
+                <option value="pool">Aquatic Fun & Pool</option>
+                <option value="garden">Nature & Events Garden</option>
+                <option value="hotel">Hotel & Accommodation</option>
+                <option value="restaurant">Restaurant & Bar</option>
+                <option value="conference">Conference Hall</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label>Your Message</label>
+              <textarea name="message" rows="5" placeholder="Tell us about your visit or event..." required></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-full">
+              Send Message <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP SECTION -->
+  <section class="map-section">
+    <div class="map-container">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.7!2d6.9!3d4.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNMKwNDgnMDAuMCJOIDbCsDU0JzAwLjAiRQ!5e0!3m2!1sen!2sng!4v1234567890" 
+        width="100%" 
+        height="100%" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container-section">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="logo-wrapper">
+            <i class="fas fa-leaf"></i>
+            <h3>Playfield Park</h3>
+          </div>
+          <p>Your perfect getaway destination in Port Harcourt.</p>
+          <div class="social-links">
+            <a href="https://www.instagram.com/play.fieldpark" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/2347040077721"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="attractions.html">Attractions</a></li>
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <p><i class="fas fa-phone"></i> 0905 763 7370</p>
+          <p><i class="fas fa-phone"></i> 0704 007 7721</p>
+          <p><i class="fas fa-map-marker-alt"></i> Port Harcourt, Nigeria</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Playfield Park. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      hamburger.classList.toggle('active');
+    });
+
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('main-header');
+      if (window.scrollY > 50) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+    });
+  </script>
+
+</body>
+</html>
