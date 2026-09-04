@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat With Us | Playfield Park</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .chat-page{min-height:70vh;display:flex;align-items:center;justify-content:center;padding:70px 20px;background:#f7faf9}
+    .chat-card{width:100%;max-width:620px;background:#fff;border-radius:24px;padding:32px;box-shadow:0 15px 45px rgba(0,0,0,.1)}
+    .chat-head{display:flex;align-items:center;gap:15px;margin-bottom:25px}
+    .chat-icon{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#25D366;color:#fff;font-size:25px}
+    .chat-head h2{margin:0}.chat-head p{margin:4px 0 0;color:#667}
+    .quick-actions{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0}
+    .quick-actions button{border:1px solid #dce7e3;background:#f7faf9;border-radius:20px;padding:9px 14px;cursor:pointer;font:inherit}
+    .chat-card textarea{width:100%;box-sizing:border-box;border:1px solid #d8e2df;border-radius:14px;padding:14px;font:inherit;resize:vertical;min-height:130px;outline:none}
+    .chat-card textarea:focus{border-color:#25D366}
+    .wa-btn{width:100%;margin-top:15px;border:0;border-radius:14px;padding:15px;background:#25D366;color:#fff;font-weight:700;font-size:16px;cursor:pointer}
+    .wa-btn:hover{filter:brightness(.95)}
+  </style>
+</head>
+<body>
+  <header id="main-header"><div class="container"><nav>
+    <div class="logo-wrapper"><i class="fas fa-leaf"></i><h1 class="logo">Playfield Park</h1></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="attractions.html">Attractions</a></li><li><a href="videos.html">Videos</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+  </nav></div></header>
+
+  <section class="page-header"><div class="page-header-bg" style="background:linear-gradient(135deg,#1a936f 0%,#00bbf9 100%);"></div><div class="page-header-content"><h1>Customer Chat</h1><p>We're here to help you plan your visit</p></div></section>
+
+  <main class="chat-page"><div class="chat-card">
+    <div class="chat-head"><div class="chat-icon"><i class="fab fa-whatsapp"></i></div><div><h2>Chat with Playfield Park</h2><p>Send your question directly to our WhatsApp.</p></div></div>
+    <p>Choose a quick question or type your own message below. When you continue, WhatsApp will open with your message ready to send.</p>
+    <div class="quick-actions">
+      <button type="button" data-message="Hello Playfield Park 👋 I would like to know more about your attractions.">🎢 Attractions</button>
+      <button type="button" data-message="Hello Playfield Park 👋 I would like to ask about your opening hours and entrance fees.">🎟️ Tickets</button>
+      <button type="button" data-message="Hello Playfield Park 👋 I would like to make an enquiry about booking an event.">🎉 Events</button>
+      <button type="button" data-message="Hello Playfield Park 👋 I would like to ask about hotel accommodation.">🏨 Hotel</button>
+    </div>
+    <textarea id="chatMessage" placeholder="Type your message here..."></textarea>
+    <button class="wa-btn" id="whatsappBtn"><i class="fab fa-whatsapp"></i> Continue on WhatsApp</button>
+  </div></main>
+
+  <footer><div class="container-section"><div class="footer-bottom"><p>&copy; 2026 Playfield Park. All rights reserved.</p></div></div></footer>
+
+  <script>
+    const hamburger=document.querySelector('.hamburger');
+    const navLinks=document.querySelector('.nav-links');
+    hamburger.addEventListener('click',()=>{navLinks.classList.toggle('active');hamburger.classList.toggle('active');});
+    document.querySelectorAll('.quick-actions button').forEach(button=>button.addEventListener('click',()=>{document.getElementById('chatMessage').value=button.dataset.message;}));
+    document.getElementById('whatsappBtn').addEventListener('click',()=>{
+      const text=document.getElementById('chatMessage').value.trim() || 'Hello Playfield Park 👋 I have a question about visiting the park.';
+      window.location.href='https://wa.me/2347040077721?text='+encodeURIComponent(text);
+    });
+  </script>
+</body>
+</html>
